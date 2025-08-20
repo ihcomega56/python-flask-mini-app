@@ -1,0 +1,28 @@
+# Python関連
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+ENV/
+
+# VSCode関連
+.vscode/
+
+# OS関連
+.DS_Store
+Thumbs.db
+
+# Azure関連
+.azure/
+
+# ログ・一時ファイル
+*.log
+*.tmp
+
+# その他
+instance/
+*.sqlite3
+
+# 静的ファイル（画像などは除外しない）

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="max-width:600px;margin:2em auto;padding:2em;background:#222;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+  <h2 style="margin-bottom:1em;">マイページ</h2>
+  <form method="post" style="margin-bottom:1.5em;">
+    <label>お名前:<input type="text" name="name" required></label><br>
+    <label>住所:<input type="text" name="address" required></label><br>
+    <label>電話番号:<input type="text" name="phone" required></label><br>
+    <button type="submit">登録する</button>
+  </form>
+  <h3>登録済みユーザー</h3>
+  <ul>
+    {% for user in users %}
+      <li>{{ user.name }} / {{ user.address }} / {{ user.phone }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}
+{% extends 'base.html' %}
+{% block content %}
+<div style="max-width:600px;margin:2em auto;padding:2em;background:#222;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+  <h2 style="margin-bottom:1em;">マイページ</h2>
+  <form method="post" style="margin-bottom:1.5em;">
+    <label>お名前:<input type="text" name="name" required></label><br>
+    <label>住所:<input type="text" name="address" required></label><br>
+    <label>電話番号:<input type="text" name="phone" required></label><br>
+    <button type="submit">登録する</button>
+  </form>
+  <h3>登録済みユーザー</h3>
+  <ul>
+    {% for user in users %}
+      <li>{{ user.name }} / {{ user.address }} / {{ user.phone }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

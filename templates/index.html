@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="max-width:900px;margin:2em auto;padding:2em;background:#222;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+  <div class="guitar-list">
+      {% for guitar in guitars %}
+      <div class="guitar-card">
+          <img src="{{ url_for('static', filename=guitar.image) }}" alt="{{ guitar.name }}">
+          <h2>{{ guitar.name }}</h2>
+          <p>価格: ¥{{ "{:,}".format(guitar.price) }}</p>
+          <form action="/add_to_cart/{{ guitar.id }}" method="get">
+              <button type="submit">カートに追加</button>
+          </form>
+      </div>
+      {% endfor %}
+  </div>
+</div>
+{% endblock %}

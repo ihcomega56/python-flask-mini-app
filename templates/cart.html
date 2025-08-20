@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="max-width:600px;margin:2em auto;padding:2em;background:#222;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+    <h2 style="margin-bottom:1em;">カート内容</h2>
+    {% if items %}
+    <table class="cart-table" style="margin-bottom:1.5em;">
+            <tr><th>ギター名</th><th>価格</th></tr>
+            {% for item in items %}
+            <tr>
+                    <td>{{ item.name }}</td>
+                    <td>¥{{ "{:,}".format(item.price) }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    <p style="margin-bottom:1.5em;">合計: <strong>¥{{ "{:,}".format(total) }}</strong></p>
+    <a href="/checkout" class="checkout-btn">購入手続きへ</a>
+    {% else %}
+    <p>カートは空です。</p>
+    {% endif %}
+</div>
+{% endblock %}

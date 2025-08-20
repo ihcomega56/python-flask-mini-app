@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Guitar EC Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>🎸 ギターECサイト</h1>
+        <nav>
+            <a href="/">ホーム</a>
+            <a href="/cart">カート</a>
+            <a href="/users">マイページ</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 Guitar EC Site</p>
+    </footer>
+</body>
+</html>
