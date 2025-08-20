@@ -9,9 +9,9 @@ app.secret_key = 'your_secret_key'  # セッション管理用
 
  # サンプルギターデータ
 GUITARS = [
-    {'id': 1, 'name': 'Fender Stratocaster', 'price': 120000, 'image': 'strat.jpg'},
-    {'id': 2, 'name': 'Gibson Les Paul', 'price': 150000, 'image': 'lespaul.jpg'},
-    {'id': 3, 'name': 'Ibanez RG', 'price': 90000, 'image': 'ibanez.jpg'},
+    {'id': 1, 'name': 'Fender Stratocaster', 'price': 120000, 'image': 'strat.png'},
+    {'id': 2, 'name': 'Gibson Les Paul', 'price': 150000, 'image': 'lespaul.png'},
+    {'id': 3, 'name': 'Ibanez RG', 'price': 90000, 'image': 'ibanez.png'},
 ]
 
 # インメモリでユーザー情報を保持
